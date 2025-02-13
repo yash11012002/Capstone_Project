@@ -16,6 +16,7 @@ public class DriverManager {
     public static void createDriver(){
         if(ConfigReader.getConfigValue("platform").equals("web")){
             driver = new ChromeDriver();
+            driver.manage().window().maximize();
         } else if (ConfigReader.getConfigValue("platform").equals("mobile")) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("automationName",ConfigReader.getConfigValue("automation.name"));
@@ -30,5 +31,8 @@ public class DriverManager {
 //            ("Platform should be either Web or Mobile");
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+    }
+    public static WebDriver getDriver(){
+        return driver;
     }
 }
