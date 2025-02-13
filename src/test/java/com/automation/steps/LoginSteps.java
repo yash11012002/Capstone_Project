@@ -1,31 +1,41 @@
 package com.automation.steps;
 
 import com.automation.pages.web.WebLoginPage;
+import com.automation.utils.ConfigReader;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
 
-public class LoginSteps {
+public class LoginSteps extends BaseSteps {
 
-    WebLoginPage loginPage=new WebLoginPage();
+
     @Given("user opens application")
     public void user_opens_application() {
        loginPage.openApplication();
     }
-//
-//    @Then("verify login page is displayed")
-//    public void verify_login_page_is_displayed() {
-//        // Write code here that turns the phrase above into concrete actions
-//        throw new io.cucumber.java.PendingException();
-//    }
-//
-//    @When("user login with valid credentials")
-//    public void user_login_with_valid_credentials() {
-//        // Write code here that turns the phrase above into concrete actions
-//        throw new io.cucumber.java.PendingException();
-//    }
-//
-//    @Then("verify user successfully logged in")
-//    public void verify_user_successfully_logged_in() {
-//        // Write code here that turns the phrase above into concrete actions
-//        throw new io.cucumber.java.PendingException();
-//    }
+
+    @When("user navigates to sign-in page")
+    public void userNavigatesToSignInPage() {
+        loginPage.navigateToSignIn();
+
+    }
+
+    @Then("verify user is on sign-in page")
+    public void verifyUserIsOnSignInPage() {
+        Assert.assertTrue(loginPage.isSignInPAgeDisplayed());
+    }
+
+    @When("user enters mobile number as {string}")
+    public void userEntersMobileNumberAs(String phoneNumber) {
+        loginPage.enterPhoneNumber(ConfigReader.getConfigValue(phoneNumber));
+    }
+
+    @Then("verify user is successfully logged in")
+    public void verifyUserIsSuccessfullyLoggedIn() {
+       Assert.assertTrue( loginPage.isLoginSuccessful());
+    }
+
+
 }
