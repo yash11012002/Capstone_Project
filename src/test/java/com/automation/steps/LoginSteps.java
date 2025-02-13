@@ -6,8 +6,8 @@ import io.cucumber.java.en.Given;
 public class LoginSteps {
 
     WebLoginPage loginPage=new WebLoginPage();
-    @Given("user open application")
-    public void user_open_application() {
+    @Given("user opens application")
+    public void user_opens_application() {
        loginPage.openApplication();
     }
 //
