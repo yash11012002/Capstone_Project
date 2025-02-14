@@ -24,7 +24,7 @@ public class LoginSteps extends BaseSteps {
 
     @Then("verify user is on sign-in page")
     public void verifyUserIsOnSignInPage() {
-        Assert.assertTrue(loginPage.isSignInPAgeDisplayed());
+        Assert.assertTrue(loginPage.isSignInPageDisplayed());
     }
 
     @When("user enters mobile number as {string}")

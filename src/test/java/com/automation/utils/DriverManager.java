@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.net.URL;
 import java.time.Duration;
 
 public class DriverManager {
@@ -25,7 +26,10 @@ public class DriverManager {
             capabilities.setCapability("app",ConfigReader.getConfigValue("app.path"));
             capabilities.setCapability("appActivity",ConfigReader.getConfigValue("app.activity"));
             capabilities.setCapability("appPackage",ConfigReader.getConfigValue("app.package"));
-            driver = new AndroidDriver(capabilities);
+           // driver = new AndroidDriver(capabilities);
+
+                driver = new AndroidDriver(capabilities);
+
         }
         else {
 //            ("Platform should be either Web or Mobile");

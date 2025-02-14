@@ -32,7 +32,7 @@ public class WebLoginPage extends WebBasePage implements LoginPage {
     }
 
     @Override
-    public boolean isSignInPAgeDisplayed() {
+    public boolean isSignInPageDisplayed() {
         return isElementPresent(signInText);
     }
 

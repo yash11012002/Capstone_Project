@@ -5,7 +5,7 @@ public interface LoginPage {
 
     void navigateToSignIn();
 
-    boolean isSignInPAgeDisplayed();
+    boolean isSignInPageDisplayed();
 
     void enterPhoneNumber(String configValue);
 
