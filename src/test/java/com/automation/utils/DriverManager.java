@@ -26,7 +26,7 @@ public class DriverManager {
             capabilities.setCapability("app",ConfigReader.getConfigValue("app.path"));
             capabilities.setCapability("appActivity",ConfigReader.getConfigValue("app.activity"));
             capabilities.setCapability("appPackage",ConfigReader.getConfigValue("app.package"));
-           // driver = new AndroidDriver(capabilities);
+            capabilities.setCapability("autoGrantPermissions", true);
 
                 driver = new AndroidDriver(capabilities);
 
