@@ -1,5 +1,6 @@
 package com.automation.steps;
 
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,8 +14,8 @@ public class HomeSteps extends BaseSteps{
     }
 
     @When("user searches for product {string}")
-    public void userSearchesForProduct(String arg0) {
-
+    public void userSearchesForProduct(String productName) {
+    homePage.userSearchProductName(ConfigReader.getConfigValue(productName));
     }
 
 
