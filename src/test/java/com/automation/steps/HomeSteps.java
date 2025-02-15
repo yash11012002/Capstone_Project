@@ -15,7 +15,7 @@ public class HomeSteps extends BaseSteps{
 
     @When("user searches for product {string}")
     public void userSearchesForProduct(String productName) {
-    homePage.userSearchProductName(ConfigReader.getConfigValue(productName));
+        homePage.userSearchProductName(ConfigReader.getConfigValue(productName));
     }
 
 
