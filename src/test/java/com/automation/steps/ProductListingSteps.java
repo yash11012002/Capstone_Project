@@ -11,6 +11,6 @@ public class ProductListingSteps {
     }
 
     @And("verify the searched product {string} is displayed")
-    public void verifyTheSearchedProductIsDisplayed(String arg0) {
+    public void verifyTheSearchedProductIsDisplayed(String productName) {
     }
 }

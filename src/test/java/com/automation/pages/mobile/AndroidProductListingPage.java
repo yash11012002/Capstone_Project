@@ -9,7 +9,7 @@ public class AndroidProductListingPage extends AndroidBasePage implements Produc
         return true;
     }
     @Override
-    public boolean verifySearchProductDisplayed(){
+    public boolean verifySearchProductDisplayed(String productName){
         return true;
     }
 }

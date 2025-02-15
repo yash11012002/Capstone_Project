@@ -9,7 +9,7 @@ public class WebProductListingPage extends WebBasePage implements ProductListing
         return true;
     }
     @Override
-    public boolean verifySearchProductDisplayed(){
+    public boolean verifySearchProductDisplayed(String productName){
         return true;
     }
 }
