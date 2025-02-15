@@ -13,4 +13,9 @@ public class WebHomePage extends WebBasePage implements HomePage {
     public boolean isHomePageDisplayed() {
         return isElementPresent(jioMartText);
     }
+
+    @Override
+    public void userSearchProductName(String productName){
+
+    }
 }

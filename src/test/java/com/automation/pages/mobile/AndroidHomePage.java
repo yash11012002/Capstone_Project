@@ -8,4 +8,10 @@ public class AndroidHomePage extends AndroidBasePage implements HomePage {
     public boolean isHomePageDisplayed() {
         return true;
     }
+    @Override
+    public void userSearchProductName(String productName){
+
+    }
+
+
 }
